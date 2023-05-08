@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+  <html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
+
+        <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>SafeSpace WomenGirls</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <style>
+          
+        </style>
+      </head>
+    <body>
+        <nav class="white sticky">
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo responsive-img"><img src="{% static 'logo.jpg' %}"></a>
+              <ul class="right hide-on-med-and-down">
+
+                <li><a class="blue-text bold" href="{% url 'who' %}">WHO WE ARE</a></li>
+                <li><a class="blue-text bold" href="{% url 'where' %}">WHERE WE WORK</a></li>
+                <li><a class="blue-text" href="#contacts">CONTACTS</a></li>
+                
+              </ul>
+            </div>
+          </nav>
+          
+          {% block content %}
+          {% endblock content %}
+          
+          <footer class="page-footer black">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Get in touch</h5>
+                  <form>
+                    <div class="input-field">
+                      <i class="material-icons prefix">email</i>
+                      <input type="email" id="email">
+                      <label for="email">Your Email</label>
+                    </div>
+                    <div class="input-field">
+                      <i class="material-icons prefix">message</i>
+                      <textarea id="message" class="materialize-textarea" cols="20" rows="20"></textarea>
+                      <label for="message">Your Message</label>
+                    </div>
+                    <div class="input-field center">
+                      <button class="btn">Submit</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text" id="contacts">Find us on Social Media</h5>
+                  <br>
+                  <ul class="socmedia">
+                    <li><a class="grey-text text-lighten-3" href="#!"><img src="{% static 'instagram.png' %}" class="social" alt=""></a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"><img src="{% static 'twitter.png' %}" class="social" alt=""></a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"><img src="{% static 'tiktok.png' %}" class="social" alt=""></a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"><img src="{% static 'facebook.png' %}" class="social" alt=""></a></li>
+                  </ul>
+
+                  <p>Email: </p>
+                  <p>Phone: </p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright center">
+              <div class="container">
+              © 2023 Copyright 
+              </div>
+            </div>
+          </footer>
+
+          <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+            <!--JavaScript at end of body for optimized loading-->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                        $('.slider').slider();
+                        $('.tabs').tabs();
+                        $('.materialboxed').materialbox();
+
+                        
+                    });
+            </script>
+    </body>
+  </html>
