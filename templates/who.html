@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% load static %}
 {% block content %}
 <div class="main container center row">
     <section class="col s12 m6 l6">
@@ -13,8 +14,25 @@
     </section>
 
     <section class="col s12 m6 l6">
-
+        <img src="{% static 'favicon.png' %}">
     </section>
     
+</div>
+<hr>
+<div class="container center">
+    <h5>Vision</h5>
+    <p>To work hand in hand with most vulnerable communities to overcome poverty, social injustice and alleviate human suffering.</p>
+    <h5>Mission</h5>
+    <p>Our mission is to promote gender equality and enhance the well-being of girls and women through education, health, and economic empowerment initiatives. We strive to keep girls in school and empower women through micro-enterprise development, ensuring their right to food/nutrition, water, and promoting access to humanitarian health services.</p>
+    <h5>Our Goal</h5>
+    <p>Our ultimate goal is to create a world where every girl and woman has the opportunity to reach her full potential and live a fulfilling life.</p>
+    <h5>CORE VALUES</h5>
+    <ul>
+        <li>Respect to human dignity</li>
+        <li>Solidarity and giving hope to those we serve</li>
+        <li>Moral and ethical integrity.</li>
+        <li>Impartiality and equity</li>
+        <li>Transparency and accountability to stakeholders.</li>
+    </ul>
 </div>
 {% endblock %}
